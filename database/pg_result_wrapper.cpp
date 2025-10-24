@@ -1,5 +1,4 @@
 #include "pg_result_wrapper.hpp"
-#include "../../utils/utils.hpp"
 
 PGResultWrapper::PGResultWrapper(PGconn* c, PGresult* r): conn{c}, ptr{r}{
 }

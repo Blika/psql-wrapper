@@ -44,7 +44,8 @@ class Database{
                 paramValues.push_back(first);
                 paramLengths.push_back(static_cast<int>(strlen(first)));
             }else if constexpr(std::is_same_v<std::decay_t<T>, std::string>){
-                paramValues.push_back(first.c_str());
+                stringStorage.push_back(first);
+                paramValues.push_back(stringStorage.back().c_str());
                 paramLengths.push_back(static_cast<int>(first.length()));
             }else if constexpr(std::is_integral_v<std::decay_t<T>> || std::is_floating_point_v<std::decay_t<T>>){
                 stringStorage.push_back(std::to_string(first));
