@@ -1,1 +1,1 @@
-something something
+C++ PostgreSQL wrapper
