@@ -8,7 +8,7 @@
 
 class Database{
     public:
-        Database(const int& num_conns, const char* conn_data);
+        Database(int num_conns, const char* conn_data);
         ~Database();
 
         template<typename... Args>

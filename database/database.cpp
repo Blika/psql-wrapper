@@ -1,7 +1,7 @@
 #include "database.hpp"
 #include "pg_transaction.hpp"
 
-Database::Database(const int& num_conns, const char* conn_data){
+Database::Database(int num_conns, const char* conn_data){
     poolSize = num_conns;
     conn = conn_data;
     for(int i = 0; i < num_conns; ++i){

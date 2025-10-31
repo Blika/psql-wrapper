@@ -23,26 +23,26 @@ bool PGResultWrapper::isOK(){
 int PGResultWrapper::rows(){
     return PQntuples(ptr);
 }
-char* PGResultWrapper::getValue(const int& row, const int& column){
+char* PGResultWrapper::getValue(int row, int column){
     return PQgetvalue(ptr, row, column);
 }
-std::string PGResultWrapper::getString(const int& row, const int& column){
+std::string PGResultWrapper::getString(int row, int column){
     char* v = PQgetvalue(ptr, row, column);
     return std::string(v);
 }
-int PGResultWrapper::getInt(const int& row, const int& column){
+int PGResultWrapper::getInt(int row, int column){
     char* v = PQgetvalue(ptr, row, column);
     return std::atoi(v);
 }
-float PGResultWrapper::getFloat(const int& row, const int& column){
+float PGResultWrapper::getFloat(int row, int column){
     char* v = PQgetvalue(ptr, row, column);
     return std::atof(v);
 }
-double PGResultWrapper::getDouble(const int& row, const int& column){
+double PGResultWrapper::getDouble(int row, int column){
     char* v = PQgetvalue(ptr, row, column);
     return std::strtod(v, NULL);
 }
-bool PGResultWrapper::getBool(const int& row, const int& column){
+bool PGResultWrapper::getBool(int row, int column){
     char* v = PQgetvalue(ptr, row, column);
     return std::atoi(v) == 1;
 }

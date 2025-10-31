@@ -13,10 +13,10 @@ class PGResultWrapper{
         ExecStatusType status();
         bool isOK();
         int rows();
-        char* getValue(const int& row, const int& column);
-        int getInt(const int& row, const int& column);
-        float getFloat(const int& row, const int& column);
-        double getDouble(const int& row, const int& column);
-        bool getBool(const int& row, const int& column);
-        std::string getString(const int& row, const int& column);
+        char* getValue(int row, int column);
+        int getInt(int row, int column);
+        float getFloat(int row, int column);
+        double getDouble(int row, int column);
+        bool getBool(int row, int column);
+        std::string getString(int row, int column);
 };
